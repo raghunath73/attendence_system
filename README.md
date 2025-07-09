@@ -90,7 +90,7 @@ Open your browser and go to:
 
 1. **Add Student** → Capture face samples using webcam
 2. **Train Model** → Train face recognizer on collected images
-3. **Mark Attendance** → Recognize faces via webcam, logs to `attendance.csv`
+3. **Mark Attendance** → Recognize faces via webcam, press 'q' when face is recognised then it logs to `attendance.csv`
 4. **View Attendance** → See who was present and when
 5. **Delete Student** → Remove student from database and dataset
 
