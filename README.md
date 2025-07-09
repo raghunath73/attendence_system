@@ -74,14 +74,6 @@ env\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
-### 4. Initialize Database
-```python
-# Run this once in Python shell or call init_db() in app.py
-from utils import init_db
-init_db()
-```
-
----
 
 ## ▶️ Running the App
 
