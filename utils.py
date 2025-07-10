@@ -44,14 +44,11 @@ def mark_attendance(name):
 
     try:
         df = pd.read_csv(file)
-        # ✅ Check if required columns exist
         if not {"Name", "Date", "Time"}.issubset(df.columns):
             raise ValueError("Invalid CSV format. Rebuilding file.")
     except (FileNotFoundError, ValueError):
-        # ✅ Create new DataFrame with correct structure
         df = pd.DataFrame(columns=["Name", "Date", "Time"])
 
-    # ✅ Only mark if student not already marked today
     if not ((df["Name"] == name) & (df["Date"] == date_str)).any():
         new_entry = pd.DataFrame({"Name": [name], "Date": [date_str], "Time": [time_str]})
         df = pd.concat([df, new_entry], ignore_index=True)
